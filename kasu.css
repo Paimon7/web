@@ -49,8 +49,12 @@ video {
 }
 
 footer {
-    text-align: center;
-    background-color: #333;
+position: relative;
+    background: #000;
     color: #fff;
-    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 0 32px;
 }
