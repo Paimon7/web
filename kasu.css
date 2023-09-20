@@ -3,7 +3,6 @@ body {
   color: #333;
   background-color: #eee;
   background-image: url('https://genshin.hoyoverse.com/_nuxt/img/47f71d4.jpg')
-  height: 100%;
   overflow: auto
 }
 
