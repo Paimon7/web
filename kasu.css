@@ -1,55 +1,134 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    color: #333;
-    line-height: 1.6;
+  font-family: 'Microsoft YaHei', 微软雅黑;
+  color: #333;
+  background-color: #eee;
+  background-image: url('https://genshin.hoyoverse.com/_nuxt/img/47f71d4.jpg')
+  height: 100%;
+  overflow: auto
 }
 
-header {
-    background-color: #333;
-    color: #fff;
+main{
+    padding: 45px;
+}
+
+header{
+    position: fixed;
     text-align: center;
-    padding: 1rem 0;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    min-width: 1280px;
+    height: 66px;
+    background-color: rgba(17,17,17,0.75);
+    box-shadow: 0 3px 7px 0 rgba(0,0,0,0.35);
 }
 
-header h1 {
-    font-size: 2rem;
+.header__navbar .header__navitem {
+    font-size: 14px;
+    margin: 0 15px !important;
 }
 
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav a {
-    text-decoration: none;
+.header__navitem:hover, .header__navitem--focus {
+    text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
     color: #fff;
-    font-weight: bold;
 }
 
-main {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.header__navbar {
+    display: inline-block;
+    list-style-type: none;
+    padding-right: 0px;
+    margin-left: 0px;
 }
 
-article {
-    margin-bottom: 2rem;
+.header__navitem {
+    display: flex;
+    align-items: center;
+    position: relative;
+    float: left;
+    width: auto;
+    height: 0px;
+    margin: 0 20px !important;
+    line-height: 66px;
+    font-size: 17px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0;
+    color: #ccc;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-decoration: none;
 }
 
-video {
-  display: block;
-  margin: 0 auto;
+a {
+    text-decoration: none;
 }
 
-footer {
-position: relative;
+h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.video {
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.map-info {
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.map-info h1 {
+  font-size: 24px;
+  color: #333;
+  margin-top: 0;
+}
+
+.map-info h3 {
+  font-size: 18px;
+  color: #333;
+  margin-top: 0;
+}
+
+.footer {
+    position: relative;
+    z-index: 998;
+    width: 100%;
+    min-width: 1280px;
+    color: #ddd;
+    background-color: #111;
+    margin: 0 auto;
+}
+
+.footer__socialbar {
+    display: inline-block;
+    list-style-type: none;
+    height: 100%;
+    line-height: 100%;
+    margin-right: 250px;
+    margin-left: 10px;
+    vertical-align: center;
+}
+
+footer__cdn {
+    position: relative;
     background: #000;
     color: #fff;
     display: flex;
@@ -57,4 +136,29 @@ position: relative;
     align-items: center;
     justify-content: flex-start;
     padding: 0 0 32px;
+}
+
+.footer__top {
+    position: relative;
+    width: 1280px;
+    height: 52px;
+    line-height: 52px;
+    letter-spacing: 0;
+    font-size: 16px;
+    border-bottom: #1a1a1a solid 2px;
+    color: #999;
+    left: 50%;
+    margin-left: -640px;
+}
+
+.footer__socialitem {
+  font-size: 28px;
+  margin: 0 10px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer__socialitem:hover {
+  color: #f3f4f6;
 }
