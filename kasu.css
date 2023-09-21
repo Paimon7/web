@@ -1,9 +1,9 @@
-/* 全体の背景とフォントスタイル */
 body {
   font-family: 'Microsoft YaHei', 微软雅黑;
   color: #333;
   background-color: #eee;
   background-image: url('https://genshin.hoyoverse.com/_nuxt/img/47f71d4.jpg')
+  height: 100%;
   overflow: auto
 }
 
@@ -11,7 +11,6 @@ main{
     padding: 45px;
 }
 
-/* ヘッダー */
 header{
     position: fixed;
     text-align: center;
@@ -35,11 +34,11 @@ header{
     color: #fff;
 }
 
-.header__navbar{
-display:inline-block;
-list-style-type:none;
-padding-right:10px;
-margin-left:40px;
+.header__navbar {
+    display: inline-block;
+    list-style-type: none;
+    padding-right: 0px;
+    margin-left: 0px;
 }
 
 .header__navitem {
@@ -74,23 +73,22 @@ h1 {
   margin: 0;
 }
 
-
-/* セクションタイトル */
 h2 {
   font-size: 28px;
   color: #333;
   margin-bottom: 20px;
 }
 
-/* 動画フレーム */
 .video {
   border: 2px solid #ccc;
-  border-radius: 12px;
-  width: 100%;
-  max-width: 800px;
+  border-radius: 10px;
+  background: #000;
+  display: block;
+  object-fit: contain;
+  overflow-clip-margin: content-box;
+  overflow: clip;
 }
 
-/* マップ情報コンテナ */
 .map-info {
   background-color: #ffffff;
   border: 2px solid #ccc;
@@ -112,7 +110,6 @@ h2 {
   margin-top: 0;
 }
 
-/* フッター */
 .footer {
     position: relative;
     z-index: 998;
@@ -157,8 +154,6 @@ footer__cdn {
     margin-left: -640px;
 }
 
-
-/* ソーシャルアイコン */
 .footer__socialitem {
   font-size: 28px;
   margin: 0 10px;
