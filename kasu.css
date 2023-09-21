@@ -1,27 +1,23 @@
 body {
-  font-family: 'Microsoft YaHei', 微软雅黑;
-  color: #333;
-  background-color: #eee;
-  background-image: url('https://genshin.hoyoverse.com/_nuxt/img/47f71d4.jpg')
-  height: 100%;
-  overflow: auto
+    background-color: #fff;
+    font-family: 'Microsoft YaHei', 微软雅黑;
+    margin: 0;
+    padding: 0;
 }
 
-main{
-    padding: 45px;
-}
-
-header{
-    position: fixed;
+.header {
+    color: white;
+    height: 66px;
     text-align: center;
-    left: 0;
-    top: 0;
-    z-index: 999;
-    width: 100%;
-    min-width: 1280px;
     height: 66px;
     background-color: rgba(17,17,17,0.75);
     box-shadow: 0 3px 7px 0 rgba(0,0,0,0.35);
+}
+
+.header__navwrap {
+    display: inline-block;
+    position: relative;
+    margin-left: -34px;
 }
 
 .header__navbar .header__navitem {
@@ -34,11 +30,33 @@ header{
     color: #fff;
 }
 
-.header__navbar {
-    display: inline-block;
-    list-style-type: none;
-    padding-right: 0px;
-    margin-left: 0px;
+.header__navbar{
+display:inline-block;
+list-style-type:none;
+padding-right:10px;
+margin-left:40px;
+}
+
+.header__login {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    right: 210px;
+    height: 100%;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.header__navitem__sublist {
+    position: absolute;
+    top: 66px;
+    left: -20px;
+    background: #272626;
+    opacity: 0;
+    transition: all 0.2s ease-in;
+    border-radius: 1px;
+    pointer-events: none;
 }
 
 .header__navitem {
@@ -64,104 +82,40 @@ header{
     text-decoration: none;
 }
 
-a {
-    text-decoration: none;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+main {
+    padding: 20px;
 }
 
 h1 {
-  font-size: 36px;
-  margin: 0;
+    font-size: 24px;
+    color: #333;
 }
 
-h2 {
-  font-size: 28px;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.video {
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  background: #000;
-  display: block;
-  object-fit: contain;
-  overflow-clip-margin: content-box;
-  overflow: clip;
-}
-
-.map-info {
-  background-color: #ffffff;
-  border: 2px solid #ccc;
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.map-info h1 {
-  font-size: 24px;
-  color: #333;
-  margin-top: 0;
-}
-
-.map-info h3 {
-  font-size: 18px;
-  color: #333;
-  margin-top: 0;
-}
-
-.footer {
-    position: relative;
-    z-index: 998;
-    width: 100%;
-    min-width: 1280px;
-    color: #ddd;
-    background-color: #111;
-    margin: 0 auto;
-}
-
-.footer__socialbar {
-    display: inline-block;
-    list-style-type: none;
-    height: 100%;
-    line-height: 100%;
-    margin-right: 250px;
-    margin-left: 10px;
-    vertical-align: center;
-}
-
-footer__cdn {
-    position: relative;
-    background: #000;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0 0 32px;
-}
-
-.footer__top {
-    position: relative;
-    width: 1280px;
-    height: 52px;
-    line-height: 52px;
-    letter-spacing: 0;
-    font-size: 16px;
-    border-bottom: #1a1a1a solid 2px;
-    color: #999;
-    left: 50%;
-    margin-left: -640px;
+footer {
+    background-color: #121212;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
 }
 
 .footer__socialitem {
-  font-size: 28px;
-  margin: 0 10px;
-  color: #ffffff;
-  text-decoration: none;
-  transition: color 0.3s ease;
+    font-size: 24px;
+    margin-right: 10px;
+    color: white;
 }
 
-.footer__socialitem:hover {
-  color: #f3f4f6;
+.video {
+    width: 100%;
+    max-width: 800px;
 }
