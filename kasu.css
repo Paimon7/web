@@ -118,4 +118,6 @@ footer {
 .video {
     width: 100%;
     max-width: 800px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
 }
