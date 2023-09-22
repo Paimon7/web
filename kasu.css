@@ -5,11 +5,13 @@ body {
     padding: 0;
 }
 
-.header {
+header {
+    position: fixed;
     color: white;
     height: 66px;
     text-align: center;
-    height: 66px;
+    width: 100%;
+    min-width: 1280px;
     background-color: rgba(17,17,17,0.75);
     box-shadow: 0 3px 7px 0 rgba(0,0,0,0.35);
 }
@@ -94,7 +96,7 @@ nav ul li {
 }
 
 main {
-    padding: 20px;
+    padding: 50px;
 }
 
 h1 {
@@ -118,6 +120,4 @@ footer {
 .video {
     width: 100%;
     max-width: 800px;
-    border: 2px solid #ccc;
-    border-radius: 12px;
 }
