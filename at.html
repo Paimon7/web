@@ -9,23 +9,55 @@
 body {
     background: #fff;
     color: #444;
-    font-family: Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Meiryo,メイリオ,Osaka,MS PGothic,arial,helvetica,sans-serif;
+    font-family: 'Microsoft YaHei', 微软雅黑;
     font-size: 14px;
     line-height: 1.6;
     margin: 0;
-    padding: 0;
+    padding: 24px 24px 16px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.top {
+    background-image: url(https://img.gamewith.jp/service/hd/images/622b13889c5807e599d0d79eecea80d5.jpg),url(https://img.gamewith.jp/service/hd/images/e945f91fd898ad240262efadf3c6866f.jpg),url(https://img.gamewith.jp/service/hd/images/0fa3a7c551cf2c0841afe0a18401af09.jpg)!important;
+    background-repeat: no-repeat,no-repeat,repeat!important;
+    background-position: left,right,center!important;
+    background-size: contain,contain,contain!important;
+    padding: 12px 36px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
 }
 
 .contents-top {
-background: #db9c4a;
+    background: #db9c4a;
+    color: #fff;
     background: linear-gradient(320deg,#db9c4a 0,#624137 100%);
-    border-bottom: solid 3px #71544a;
+    border-bottom: solid 2px #71544a;
     position: relative;
+    font-size: 16px;
 }
 
 .contents {
     background-color: #e6e1cf;
     padding: 20px 10px;
+}
+
+.contents-img {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.score {
+position: absolute;
+    bottom: 0;
+    left: 20px;
+}
+
+.rank {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
 }
 
 .sub-op {
@@ -83,8 +115,17 @@ background: #db9c4a;
 
 <body>
     <h1>聖遺物スコアチェッカー</h1>
+
+        <select class="at-img-select">
+            <option value="kuso">なし(剣闘士)</option>
+            <option value="at1">絶縁の旗印</option>
+            <option value="at2">なし</option>
+        </select>
     
+<div class="top"><span id="artifactt">くそ縄</span></div>
+
 <div class="contents-top">
+<div class="contents-img"><img id="at-img" src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15001_4.png" alt="画像"></div>
     <div class="score"> SCORE：<span id="scoree">0</span></div>
         <div class="rank">ランク：<span id="rankk">弱</span></div>
 </div>
@@ -159,8 +200,8 @@ background: #db9c4a;
        <button class="reset-button" onclick="resetScore()">リセット</button>
 
 <div class="share">
-        <button class="share-button-l" onclick="shareLine()">line共有</button>
-        <button class="share-button-x" onclick="shareTwitter()">X(Twitter)共有</button>
+        <button class="share-button-l" onclick="shareLine()">LINEで共有する</button>
+        <button class="share-button-x" onclick="shareTwitter()">X(Twitter)で共有</button>
 </div>
 
     <script>
@@ -236,12 +277,11 @@ function calculateRank(score) {
         // ページ読み込み時に初回のスコア計算を実行
         calculateScore();
 
-// LINE共有
+// LINE
 function shareLine() {
     const rank = document.getElementById("rankk").textContent;
     const score = document.getElementById("scoree").textContent;
 
-    // 各ステータスの選択値と値を取得
     const statSelectors = document.querySelectorAll(".stat-selector");
     const stats = [];
 
@@ -253,23 +293,20 @@ function shareLine() {
         }
     });
 
-    // メッセージを組み立て
+    // line
 
-const message = `原神 聖遺物 判定\u200B${rank}スコア：${score}\n${stats.join("\n")}`;
+const message = `この聖遺物は「${rank}」！\nスコア：${score}\n\n${stats.join("\n")}`;
 
-    // LINE共有URL（適切なURLに置き換えてください）
     const lineShareUrl = `https://line.me/R/msg/text/?${encodeURIComponent(message)}`;
 
-    // LINE共有を実行
     window.open(lineShareUrl);
 }
 
-// Twitter共有
+// Twitter
 function shareTwitter() {
     const rank = document.getElementById("rankk").textContent;
     const score = document.getElementById("scoree").textContent;
 
-    // 各ステータスの選択値と値を取得
     const statSelectors = document.querySelectorAll(".stat-selector");
     const stats = [];
 
@@ -281,15 +318,38 @@ function shareTwitter() {
         }
     });
 
-    // メッセージを組み立て
-    const message = `原神 聖遺物 判定&#8203;``oaicite:{"number":2,"invalid_reason":"Malformed citation 【${rank}】"}``&#8203;スコア：${score}\n${stats.join("\n")}`;
+    // X
+const message = `この聖遺物は「${rank}」！\nスコア：${score}\n\n${stats.join("\n")}`;
 
-    // Twitter共有URL（適切なURLに置き換えてください）
     const twitterShareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(message)}`;
 
-    // Twitter共有を実行
     window.open(twitterShareUrl);
 }
+
+// <select>要素を取得
+const selectElement = document.querySelector(".at-img-select");
+
+// <img>要素を取得
+const imageElement = document.getElementById("at-img");
+
+// <select>要素の変更時に実行される関数
+selectElement.addEventListener("change", function() {
+    // 選択されたオプションの値を取得
+    const selectedValue = selectElement.value;
+
+    // 選択されたオプションに対応する画像を設定
+    switch (selectedValue) {
+        case "kuso":
+            imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15001_4.png";
+            break;
+        case "at1":
+            imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15020_4.png";
+            break;
+        case "at2":
+            imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15021_4.png";
+            break;
+    }
+});
 
     </script>
 </body>
