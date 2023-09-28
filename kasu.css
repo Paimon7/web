@@ -1,5 +1,5 @@
 body {
-    background-color: #fff;
+    background-color: #fffcf9;
     font-family: 'Microsoft YaHei', 微软雅黑;
     margin: 0;
     padding: 0;
@@ -99,13 +99,17 @@ main {
     padding: 50px;
 }
 
-h1 {
+h2 {
     font-size: 24px;
-    color: #333;
+    color: #10193A;
+}
+
+.ranked-map-info {
+     padding : 20px ;
 }
 
 footer {
-    background-color: #121212;
+    background-color: #272437;
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -115,6 +119,10 @@ footer {
     font-size: 24px;
     margin-right: 10px;
     color: white;
+}
+
+.qr {
+    box-shadow: 0 3px 7px 0 rgba(100,100,100,0.15);
 }
 
 .video {
