@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>んんんぼんぼ | 聖遺物スコアチェッカー</title>
+</head>
+
+<style>
+
+body {
+    background: #fff;
+    color: #444;
+    font-family: Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Meiryo,メイリオ,Osaka,MS PGothic,arial,helvetica,sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.contents-top {
+background: #db9c4a;
+    background: linear-gradient(320deg,#db9c4a 0,#624137 100%);
+    border-bottom: solid 3px #71544a;
+    position: relative;
+}
+
+.contents {
+    background-color: #e6e1cf;
+    padding: 20px 10px;
+}
+
+.sub-op {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.sub-op>select {
+    background-color: rgba(255,255,255,.6);
+    color: #404040;
+    padding: 5px;
+    border: none;
+    height: 36px;
+    vertical-align: middle;
+    margin-right: 5px;
+    font-weight: 700;
+    width: 45%;
+}
+
+.sub-op>input[type=number] {
+    width: 45%;
+    padding: 5px;
+    background-color: rgba(255,255,255,.6);
+    vertical-align: middle;
+    font-weight: 700;
+}
+
+.share-button-x{
+    background-color: #46a1f0;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 2px;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.share-button-l{
+    background-color: #00B900;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 2px;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+</style>
+
+<body>
+    <h1>聖遺物スコアチェッカー</h1>
+    
+<div class="contents-top">
+    <div class="score"> SCORE：<span id="scoree">0</span></div>
+        <div class="rank">ランク：<span id="rankk">弱</span></div>
+</div>
+
+<div class="contents">
+    <div class="sub-op"> ・
+        <select class="stat-selector">
+            <option value="none">なし</option>
+            <option value="CRITICAL_DAMAGE">会心ダメージ</option>
+            <option value="CRITICAL_PERCENTAGE">会心率</option>
+            <option value="POWER_PERCENTAGE">攻撃力（％）</option>
+            <option value="POWER_FIXED">攻撃力（数値）</option>
+            <option value="ELEMENTS_CHARGE">元素チャージ効率</option>
+            <option value="HP_FIXED">HP（数値）</option>
+            <option value="HP_PERCENTAGE">HP（％）</option>
+            <option value="DEFENSE_FIXED">防御力（数値）</option>
+            <option value="DEFENSE_PERCENTAGE">防御力（％）</option>
+            <option value="ELEMENTS_KNOWLEDGE">元素熟知</option>
+        </select>
+        <input type="number" step="0.1" min="0">
+    </div>
+    <div class="sub-op"> ・
+        <select class="stat-selector">
+            <option value="none">なし</option>
+            <option value="CRITICAL_DAMAGE">会心ダメージ</option>
+            <option value="CRITICAL_PERCENTAGE">会心率</option>
+            <option value="POWER_PERCENTAGE">攻撃力（％）</option>
+            <option value="POWER_FIXED">攻撃力（数値）</option>
+            <option value="ELEMENTS_CHARGE">元素チャージ効率</option>
+            <option value="HP_FIXED">HP（数値）</option>
+            <option value="HP_PERCENTAGE">HP（％）</option>
+            <option value="DEFENSE_FIXED">防御力（数値）</option>
+            <option value="DEFENSE_PERCENTAGE">防御力（％）</option>
+            <option value="ELEMENTS_KNOWLEDGE">元素熟知</option>
+        </select>
+        <input type="number" step="0.1" min="0">
+    </div>
+    <div class="sub-op"> ・
+        <select class="stat-selector">
+            <option value="none">なし</option>
+            <option value="CRITICAL_DAMAGE">会心ダメージ</option>
+            <option value="CRITICAL_PERCENTAGE">会心率</option>
+            <option value="POWER_PERCENTAGE">攻撃力（％）</option>
+            <option value="POWER_FIXED">攻撃力（数値）</option>
+            <option value="ELEMENTS_CHARGE">元素チャージ効率</option>
+            <option value="HP_FIXED">HP（数値）</option>
+            <option value="HP_PERCENTAGE">HP（％）</option>
+            <option value="DEFENSE_FIXED">防御力（数値）</option>
+            <option value="DEFENSE_PERCENTAGE">防御力（％）</option>
+            <option value="ELEMENTS_KNOWLEDGE">元素熟知</option>
+        </select>
+        <input type="number" step="0.1" min="0">
+    </div>
+    <div class="sub-op"> ・
+        <select class="stat-selector">
+            <option value="none">なし</option>
+            <option value="CRITICAL_DAMAGE">会心ダメージ</option>
+            <option value="CRITICAL_PERCENTAGE">会心率</option>
+            <option value="POWER_PERCENTAGE">攻撃力（％）</option>
+            <option value="POWER_FIXED">攻撃力（数値）</option>
+            <option value="ELEMENTS_CHARGE">元素チャージ効率</option>
+            <option value="HP_FIXED">HP（数値）</option>
+            <option value="HP_PERCENTAGE">HP（％）</option>
+            <option value="DEFENSE_FIXED">防御力（数値）</option>
+            <option value="DEFENSE_PERCENTAGE">防御力（％）</option>
+            <option value="ELEMENTS_KNOWLEDGE">元素熟知</option>
+        </select>
+        <input type="number" step="0.1" min="0">
+    </div>
+</div>
+
+       <button class="reset-button" onclick="resetScore()">リセット</button>
+
+<div class="share">
+        <button class="share-button-l" onclick="shareLine()">line共有</button>
+        <button class="share-button-x" onclick="shareTwitter()">X(Twitter)共有</button>
+</div>
+
+    <script>
+        // スコア計算関数
+        function calculateScore() {
+            const statSelectors = document.querySelectorAll(".stat-selector");
+            let totalScore = 0;
+
+            statSelectors.forEach(selector => {
+                const selectedStat = selector.value;
+                const inputValue = parseFloat(selector.nextElementSibling.value) || 0;
+
+                // スコア計算のロジックを追加
+                switch (selectedStat) {
+                    case "CRITICAL_DAMAGE":
+                        totalScore += inputValue;
+                        break;
+                    case "CRITICAL_PERCENTAGE":
+                        totalScore += inputValue * 2;
+                        break;
+                    case "POWER_PERCENTAGE":
+                        totalScore += inputValue;
+                        break;
+                }
+            });
+
+            // スコアを表示
+            document.getElementById("scoree").textContent = totalScore;
+
+            // ランク計算
+            calculateRank(totalScore);
+        }
+
+        // ランク計算関数
+function calculateRank(score) {
+    let rank = "弱"; // デフォルトのランク
+
+    // スコアに応じてランクを設定
+    if (score >= 45) {
+        rank = "神";
+    } else if (score >= 35) {
+        rank = "良";
+    } else if (score >= 25) {
+        rank = "並";
+    }
+
+    // ランクを表示
+    document.getElementById("rankk").textContent = rank;
+}
+
+        // リセットボタンのクリック時に入力フィールドとスコアをリセット
+        function resetScore() {
+            const statSelectors = document.querySelectorAll(".stat-selector");
+            statSelectors.forEach(selector => {
+                selector.value = "none";
+                selector.nextElementSibling.value = "";
+            });
+
+            // スコアを0にリセット
+            document.getElementById("scoree").textContent = "0";
+
+            // ランクもリセット
+            document.getElementById("rankk").textContent = "弱";
+        }
+
+        // 各セレクトボックスと数値入力フィールドの変更時にスコアを再計算
+        const statSelectors = document.querySelectorAll(".stat-selector");
+        statSelectors.forEach(selector => {
+            selector.addEventListener("change", calculateScore);
+            selector.nextElementSibling.addEventListener("input", calculateScore);
+        });
+
+        // ページ読み込み時に初回のスコア計算を実行
+        calculateScore();
+
+// LINE共有
+function shareLine() {
+    const rank = document.getElementById("rankk").textContent;
+    const score = document.getElementById("scoree").textContent;
+
+    // 各ステータスの選択値と値を取得
+    const statSelectors = document.querySelectorAll(".stat-selector");
+    const stats = [];
+
+    statSelectors.forEach(selector => {
+        const selectedStat = selector.options[selector.selectedIndex].text;
+        const inputValue = selector.nextElementSibling.value;
+        if (selectedStat !== "なし" && inputValue !== "") {
+            stats.push(`${selectedStat} ${inputValue}%`);
+        }
+    });
+
+    // メッセージを組み立て
+
+const message = `原神 聖遺物 判定\u200B${rank}スコア：${score}\n${stats.join("\n")}`;
+
+    // LINE共有URL（適切なURLに置き換えてください）
+    const lineShareUrl = `https://line.me/R/msg/text/?${encodeURIComponent(message)}`;
+
+    // LINE共有を実行
+    window.open(lineShareUrl);
+}
+
+// Twitter共有
+function shareTwitter() {
+    const rank = document.getElementById("rankk").textContent;
+    const score = document.getElementById("scoree").textContent;
+
+    // 各ステータスの選択値と値を取得
+    const statSelectors = document.querySelectorAll(".stat-selector");
+    const stats = [];
+
+    statSelectors.forEach(selector => {
+        const selectedStat = selector.options[selector.selectedIndex].text;
+        const inputValue = selector.nextElementSibling.value;
+        if (selectedStat !== "なし" && inputValue !== "") {
+            stats.push(`${selectedStat} ${inputValue}%`);
+        }
+    });
+
+    // メッセージを組み立て
+    const message = `原神 聖遺物 判定&#8203;``oaicite:{"number":2,"invalid_reason":"Malformed citation 【${rank}】"}``&#8203;スコア：${score}\n${stats.join("\n")}`;
+
+    // Twitter共有URL（適切なURLに置き換えてください）
+    const twitterShareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(message)}`;
+
+    // Twitter共有を実行
+    window.open(twitterShareUrl);
+}
+
+    </script>
+</body>
+</html>
