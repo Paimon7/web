@@ -1,6 +1,6 @@
 body {
-    background-color: #191919;
-    color: #fff;
+    background-color: #f2f2f2;
+    color: #222;
     font-family: 'Microsoft YaHei', 微软雅黑;
     margin: 0;
     padding: 0;
@@ -43,7 +43,7 @@ main {
 }
 
 h3 {
-    color: #fff;
+    color: #222;
 }
 
 .video {
@@ -69,10 +69,11 @@ h3 {
     max-width: 300px;
     display: block;
     margin: 20px auto;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.15);
 }
 
 footer {
-    background-color: #000;
+    background-color: #FFF5FF;
     padding: 10px 0;
     text-align: center;
 }
@@ -93,9 +94,9 @@ footer {
 }
 
 .footer__socialitem {
-    color: #69e0ff;
-    font-size: 24px;
-    margin-right: 20px;
+    color: #3A2545;
+    font-size: 25px;
+    margin-right: 10px;
     text-decoration: none;
 }
 
