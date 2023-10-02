@@ -7,8 +7,8 @@
   body {
               justify-content: center;
               align-items: center;
-              height: 100vh; /* ビューポートの高さいっぱいに設定 */
-              margin: 0; /* マージンを0に設定して余白をなくす */
+              height: 100vh;
+              margin: 0;
       background: #fff;
       color: #444;
       font-family: 'Microsoft YaHei', 微软雅黑;
@@ -53,12 +53,14 @@
   position: absolute;
       bottom: 0;
       left: 20px;
+      height: 250px;
   }
   
   .rank {
       position: absolute;
       bottom: 0;
       left: 20px;
+      height: 30px;
   }
   
   .sub-op {
@@ -125,23 +127,33 @@
   }
   
   .share {
-      display: flex; /* Flexboxを使用して横並びにする */
-      justify-content: space-between; /* ボタンを均等に配置 */
+      display: flex;
+      justify-content: space-between;
   }
   
   .share-button-x, .share-button-l, .share-button-i {
-      flex: 1; /* 各ボタンが均等の幅を持つようにする */
-      margin: 0 5px; /* ボタン間の間隔を設定 */
+      flex: 1;
+      margin: 0 5px;
   }
+
+.reset-button{
+      background-color: #777777;
+      display: block;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 12px;
+      text-decoration: none;
+}
 </style>
 <body>
-  <h1>聖遺物スコアチェッカー</h1> <button class="reset-button" onclick="resetScore()">リセット</button> <select class="at-img-select">
+  <h1>聖遺物スコアチェッカー</h1> <button class="reset-button" onclick="resetScore()">　リセット　</button> <select class="at-img-select">
             <option value="kuso">なし(剣闘士)</option>
             <option value="at1">絶縁の旗印</option>
             <option value="at2">なし</option>
         </select>
   <div id="elementToSave">
-    <div class="top"><span id="artifactt">くそ縄</span></div>
+    <div class="top"> <span id="artifactt" contenteditable="true">くそ縄</span></div>
     <div class="contents-top">
       <div class="contents-img"><img id="at-img" src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15001_4.png" alt="画像"></div>
       <div class="score"> SCORE：<span id="scoree">0</span></div>
@@ -218,7 +230,7 @@
         });
     }
 
-        // スコア計算関数
+
         function calculateScore() {
             const statSelectors = document.querySelectorAll(".stat-selector");
             let totalScore = 0;
@@ -227,7 +239,7 @@
                 const selectedStat = selector.value;
                 const inputValue = parseFloat(selector.nextElementSibling.value) || 0;
 
-                // スコア計算のロジックを追加
+
                 switch (selectedStat) {
                     case "CRITICAL_DAMAGE":
                         totalScore += inputValue;
@@ -265,7 +277,7 @@ function calculateRank(score) {
     document.getElementById("rankk").textContent = rank;
 }
 
-        // リセットボタンのクリック時に入力フィールドとスコアをリセット
+
         function resetScore() {
             const statSelectors = document.querySelectorAll(".stat-selector");
             statSelectors.forEach(selector => {
@@ -273,21 +285,21 @@ function calculateRank(score) {
                 selector.nextElementSibling.value = "";
             });
 
-            // スコアを0にリセット
+            // リセット
             document.getElementById("scoree").textContent = "0";
 
-            // ランクもリセット
+
             document.getElementById("rankk").textContent = "弱";
         }
 
-        // 各セレクトボックスと数値入力フィールドの変更時にスコアを再計算
+
         const statSelectors = document.querySelectorAll(".stat-selector");
         statSelectors.forEach(selector => {
             selector.addEventListener("change", calculateScore);
             selector.nextElementSibling.addEventListener("input", calculateScore);
         });
 
-        // ページ読み込み時に初回のスコア計算を実行
+
         calculateScore();
 
 // LINE
@@ -339,18 +351,18 @@ const message = `この聖遺物は「${rank}」！\nスコア：${score}\n\n${s
     window.open(twitterShareUrl);
 }
 
-// <select>要素を取得
+
 const selectElement = document.querySelector(".at-img-select");
 
-// <img>要素を取得
+
 const imageElement = document.getElementById("at-img");
 
-// <select>要素の変更時に実行される関数
+
 selectElement.addEventListener("change", function() {
-    // 選択されたオプションの値を取得
+
     const selectedValue = selectElement.value;
 
-    // 選択されたオプションに対応する画像を設定
+
     switch (selectedValue) {
         case "kuso":
             imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15001_4.png";
