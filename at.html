@@ -8,12 +8,9 @@
 </head>
 <style>
   body {
-              justify-content: center;
-              align-items: center;
-              height: 100vh;
-              margin: 0;
-      background: #fff;
-      color: #444;
+ margin: auto;
+  background-color: #3E4556;
+  color: #222;
       font-family: 'Microsoft YaHei', 微软雅黑;
       font-size: 14px;
       line-height: 1.6;
@@ -139,21 +136,28 @@
       margin: 0 5px;
   }
 
-.reset-button{
-      background-color: #777777;
-      display: block;
-      color: #fff;
-      text-align: center;
-      padding: 10px 0;
-      font-size: 12px;
-      text-decoration: none;
+.reset-button {
+ margin: 5px;
+  background-color: #ECE5D8;
+  color: #3B4255;
+  padding: 10px 100px;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  border: solid 2px #3E4556;
 }
+
+.reset-button:hover {
+  border : solid 2px #fff; 
+}
+
 </style>
 <body>
   <h1>聖遺物スコアチェッカー</h1> <button class="reset-button" onclick="resetScore()">　リセット　</button> <select class="at-img-select">
             <option value="kuso">なし(剣闘士)</option>
             <option value="at1">絶縁の旗印</option>
-            <option value="at2">なし</option>
+            <option value="at2">華館夢醒形骸記</option>
         </select>
   <div id="elementToSave">
     <div class="top"> <span id="artifactt" contenteditable="true">くそ縄</span></div>
