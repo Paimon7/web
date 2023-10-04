@@ -8,156 +8,235 @@
 </head>
 <style>
   body {
- margin: auto;
-  background-color: #3E4556;
-  color: #222;
-      font-family: 'Microsoft YaHei', 微软雅黑;
-      font-size: 14px;
-      line-height: 1.6;
-      padding: 24px 24px 16px;
-      width: 100%;
-      max-width: 600px;
+    margin: auto;
+    background-color: #3E4556;
+    color: #FFFAF2;
+    font-family: 'Microsoft YaHei', 微软雅黑;
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 24px 24px 16px;
+    width: 100%;
+    max-width: 600px;
   }
-  
+
+
   .top {
-      background-image: url(https://img.gamewith.jp/service/hd/images/622b13889c5807e599d0d79eecea80d5.jpg),url(https://img.gamewith.jp/service/hd/images/e945f91fd898ad240262efadf3c6866f.jpg),url(https://img.gamewith.jp/service/hd/images/0fa3a7c551cf2c0841afe0a18401af09.jpg)!important;
-      background-repeat: no-repeat,no-repeat,repeat!important;
-      background-position: left,right,center!important;
-      background-size: contain,contain,contain!important;
-      padding: 12px 36px;
-      font-size: 20px;
-      font-weight: 700;
-      color: #fff;
+    background-image: url(https://img.gamewith.jp/service/hd/images/622b13889c5807e599d0d79eecea80d5.jpg),url(https://img.gamewith.jp/service/hd/images/e945f91fd898ad240262efadf3c6866f.jpg),url(https://img.gamewith.jp/service/hd/images/0fa3a7c551cf2c0841afe0a18401af09.jpg)!important;
+    background-repeat: no-repeat,no-repeat,repeat!important;
+    background-position: left,right,center!important;
+    background-size: contain,contain,contain!important;
+    padding: 12px 36px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
   }
-  
+
   .contents-top {
-      background: #db9c4a;
-      color: #fff;
-      background: linear-gradient(320deg,#db9c4a 0,#624137 100%);
-      border-bottom: solid 2px #71544a;
-      position: relative;
-      font-size: 16px;
+    background: #db9c4a;
+    color: #fff;
+    background: linear-gradient(320deg,#db9c4a 0,#624137 100%);
+    border-bottom: solid 2px #71544a;
+    position: relative;
+    font-size: 16px;
   }
-  
+
   .contents {
-      background-color: #e6e1cf;
-      padding: 20px 10px;
+    padding: 20px 10px;
+    background-color: #e6e1cf;
   }
-  
+
   .contents-img {
     display: flex;
     justify-content: flex-end;
   }
-  
+
   .score {
-  position: absolute;
-      bottom: 0;
-      left: 20px;
-      height: 250px;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    height: 250px;
   }
-  
+
   .rank {
-      position: absolute;
-      bottom: 0;
-      left: 20px;
-      height: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    height: 30px;
   }
-  
+
+.at-img-select {
+  background-color: rgba(62,69,86,0.8);
+  color: #dddddd;
+  font-size: 20px;
+  text-align: center;
+}
+
+.at-ddd-select {
+  background-color: rgba(62,69,86,0.8);
+  color: #dddddd;
+  font-size: 20px;
+  text-align: center;
+}
+
+  .at-img-select, .at-ddd-select{
+    width: 297px;
+    padding: 3px;
+    margin-bottom: 2px;
+}
+
   .sub-op {
-      font-size: 16px;
-      margin-bottom: 10px;
-      font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #333;
   }
-  
+
+  select {
+    max-width: 100%;
+  }
+
   .sub-op>select {
-      background-color: rgba(255,255,255,.6);
-      color: #404040;
-      padding: 5px;
-      border: none;
-      height: 36px;
-      vertical-align: middle;
-      margin-right: 5px;
-      font-weight: 700;
-      width: 45%;
+    background-color: rgba(255,255,255,.6);
+    color: #404040;
+    padding: 5px;
+    border: none;
+    height: 36px;
+    vertical-align: middle;
+    margin-right: 5px;
+    font-weight: 700;
+    width: 45%;
   }
-  
+
   .sub-op>input[type=number] {
-      width: 45%;
-      padding: 5px;
-      background-color: rgba(255,255,255,.6);
-      vertical-align: middle;
-      font-weight: 700;
+    border: none;
+    width: 45%;
+    height: 26px;
+    padding: 5px;
+    background-color: rgba(255,255,255,.6);
+    vertical-align: middle;
+    font-weight: 700;
+    border-color: #51545D;
   }
-  
-  .share-button-x{
-      background-color: #46a1f0;
-      display: block;
-      color: #fff;
-      text-align: center;
-      padding: 10px 0;
-      border-radius: 2px;
-      font-size: 12px;
-      line-height: 1.5;
-      letter-spacing: 1px;
+
+  input:focus {
+    outline: none;
   }
-  
-  .share-button-l{
-      background-color: #00B900;
-      display: block;
-      color: #fff;
-      text-align: center;
-      padding: 10px 0;
-      border-radius: 2px;
-      font-size: 12px;
-      line-height: 1.5;
-      letter-spacing: 1px;
-      text-decoration: none;
+
+  button {
+    border: none;
+    margin: 5px;
   }
-  
-  .share-button-i{
-      background-color: #777777;
-      display: block;
-      color: #fff;
-      text-align: center;
-      padding: 10px 0;
-      font-size: 12px;
-      line-height: 1.5;
-      letter-spacing: 1px;
-      text-decoration: none;
+
+  .share-button-x {
+    background-color: #46a1f0;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 2px;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 1px;
   }
-  
+
+  .share-button-l {
+    background-color: #06C755;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 2px;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    text-decoration: none;
+  }
+
+  .share-button-i {
+    background-color: #777777;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    text-decoration: none;
+  }
+
   .share {
-      display: flex;
-      justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
   }
-  
+
   .share-button-x, .share-button-l, .share-button-i {
-      flex: 1;
-      margin: 0 5px;
+    flex: 1;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
   }
 
-.reset-button {
- margin: 5px;
-  background-color: #ECE5D8;
-  color: #3B4255;
-  padding: 10px 100px;
-  font-size: 16px;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  border: solid 2px #3E4556;
-}
+  .reset-button {
+    background-color: #ECE5D8;
+    color: #3B4255;
+    padding: 10px 100px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: solid 2px #3E4556;
+    text-align:center;
+  }
 
-.reset-button:hover {
-  border : solid 2px #fff; 
-}
+  .reset-button:hover {
+    border : solid 2px #fff; 
+  }
 
+  .reset-button:active {
+    color: #ffffff;
+    background-color: #9a8d7b;
+    border : solid 2px rgb(154, 141, 123);
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+  }
+
+  .shine{
+    text-align: center;
+   margin-top: 5px;
+}
 </style>
+
 <body>
-  <h1>聖遺物スコアチェッカー</h1> <button class="reset-button" onclick="resetScore()">　リセット　</button> <select class="at-img-select">
-            <option value="kuso">なし(剣闘士)</option>
-            <option value="at1">絶縁の旗印</option>
-            <option value="at2">華館夢醒形骸記</option>
+  <h1>聖遺物スコアチェッカー</h1>
+<select class="at-ddd-select">
+            <option value="atk">汎用型</option>
+            <option value="er">元素チャ型(実装予定)</option>
+            <option value="crate">熟知型(実装予定)</option>
+            <option value="hp">HP型(実装予定)</option>
+            <option value="em">防御型(実装予定)</option>
+        </select>
+<select class="at-img-select">
+            <option value="kuso">剣闘士</option>
+            <option value="at1">翠緑の影</option>
+            <option value="at2">大地を流浪する楽団</option>
+            <option value="at3">雷のような怒り</option>
+            <option value="at4">燃え盛る炎の魔女</option>
+            <option value="at5">旧貴族のしつけ</option>
+            <option value="at6">悠久の磐岩</option>
+            <option value="at7">逆飛びの流星</option>
+            <option value="at8">沈淪の心</option>
+            <option value="at9">千岩牢固</option>
+            <option value="at10">蒼白の炎</option>
+            <option value="at11">追憶のしめ縄</option>
+            <option value="at12">絶縁の旗印</option>
+            <option value="at13">華館夢醒形骸記</option>
+            <option value="at14">海染硨磲</option>
+            <option value="at15">深林の記憶</option>
+            <option value="at16">金メッキの夢</option>
+            <option value="at17">砂上の楼閣の史話</option>
+            <option value="at18">楽園の絶花</option>
+            <option value="at19">水仙の夢</option>
+            <option value="at20">花海甘露の光</option>
+            <option value="at21">ファントムハンター</option>
+            <option value="at22">黄金の劇団</option>
         </select>
   <div id="elementToSave">
     <div class="top"> <span id="artifactt" contenteditable="true">くそ縄</span></div>
@@ -221,7 +300,10 @@
         </select> <input type="number" step="0.1" min="0"> </div>
     </div>
   </div>
-  <div class="share"> <button class="share-button-l" onclick="shareLine()">LINEで共有する</button> <button class="share-button-x" onclick="shareTwitter()">X(Twitter)で共有</button> <button class="share-button-i" onclick="imgSave()">画像で共有(故障中)</button> </div>
+
+<div class="share"> <button class="share-button-l" onclick="shareLine()">LINEで共有する</button> <button class="share-button-x" onclick="shareTwitter()">X(Twitter)で共有</button> <button class="share-button-i" onclick="imgSave()">画像で共有(故障中)</button> </div>
+<div class="shine"><button class="reset-button" onclick="resetScore()">　リセット　</button></div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
   <script>
     function imgSave() {
@@ -372,10 +454,70 @@ selectElement.addEventListener("change", function() {
             imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15001_4.png";
             break;
         case "at1":
-            imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15020_4.png";
+            imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15002_4.png";
             break;
         case "at2":
+            imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15003_4.png";
+            break;
+        case "at3":
+            imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15005_4.png";
+            break;
+        case "at4":
+            imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15006_4.png";
+            break;
+        case "at5":
+            imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15007_4.png";
+            break;
+        case "at6":
+            imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15014_4.png";
+            break;
+        case "at7":
+            imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15015_3.png";
+            break;
+        case "at8":
+            imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15016_4.png";
+            break;
+        case "at9":
+            imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15017_4.png";
+            break;
+        case "at10":
+            imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15018_4.png";
+            break;
+        case "at11":
+            imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15019_4.png";
+            break;
+        case "at12":
+            imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15020_4.png";
+            break;
+        case "at13":
             imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15021_4.png";
+            break;
+        case "at14":
+            imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15022_4.png";
+            break;
+        case "at15":
+            imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15025_4.png";
+            break;
+        case "at16":
+            imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15026_4.png";
+            break;
+        case "at17":
+            imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15027_4.png";
+            break;
+        case "at18":
+            imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15028_4.png";
+            break;
+        case "at19":
+            imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15029_4.png";
+            break;
+        case "at20":
+            imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15030_4.png";
+            break;
+        case "at21":
+            imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15031_4.png";
+            break;
+        case "at22":
+            imageElement.src = "https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15032_4.png";
             break;
     }
 });
