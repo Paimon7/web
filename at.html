@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
   <title>んんんぼんぼ | 聖遺物スコアチェッカー</title>
+<meta data-n-head="true" data-hid="og:image" property="og:image" content="https://genshin.hoyoverse.com/_nuxt/img/29770c4.jpg">
+<meta data-n-head="true" data-hid="description" name="description" content="原神の聖遺物スコアチェッカーです。ゴミ聖遺物しか出ないあなたにお勧め">
 </head>
 <style>
   body {
@@ -247,20 +250,17 @@
                     case "CRITICAL_PERCENTAGE":
                         totalScore += inputValue * 2;
                         break;
-                    case "POWER_PERCENTAGE":
-                        totalScore += inputValue;
-                        break;
-                }
-            });
+            case "POWER_PERCENTAGE":
+                totalScore += inputValue;
+                break;
+        }
+    });
 
-            // スコアを表示
-            document.getElementById("scoree").textContent = totalScore;
+    document.getElementById("scoree").textContent = totalScore.toFixed(1);
 
-            // ランク計算
-            calculateRank(totalScore);
+    calculateRank(totalScore.toFixed(1));
         }
 
-        // ランク計算関数
 function calculateRank(score) {
     let rank = "弱"; // デフォルトのランク
 
