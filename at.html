@@ -401,7 +401,7 @@ function shareLine() {
         const selectedStat = selector.options[selector.selectedIndex].text;
         const inputValue = selector.nextElementSibling.value;
         if (selectedStat !== "なし" && inputValue !== "") {
-            stats.push(`${selectedStat} ${inputValue}%`);
+            stats.push(`${selectedStat} ${inputValue}`);
         }
     });
 
